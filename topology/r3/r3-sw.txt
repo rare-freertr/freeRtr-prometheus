@@ -1,0 +1,152 @@
+hostname r3
+!
+!
+!
+vrf definition v1
+ exit
+!
+!
+!
+interface ethernet1
+ description r3@e1 -> r1@e1
+ vrf forwarding v1
+ ipv4 address 1.1.1.2 255.255.255.252
+ no shutdown
+ exit
+!
+interface ethernet2
+ description r3@e1 -> r2@e1
+ vrf forwarding v1
+ ipv4 address 2.2.2.2 255.255.255.252
+ no shutdown
+ exit
+!
+interface ethernet3
+ description r3@e1 -> r4@e1
+ vrf forwarding v1
+ ipv4 address 3.3.3.1 255.255.255.252
+ no shutdown
+ exit
+!
+!
+!
+!
+sensor ifaces-acl
+ path ifaces-acl/ifaces-acl
+ prefix ifaces-acl
+ prepend ifaces_acl_
+ command show access-list acl_all_ipv6_flowlabels
+ name 0 seq=
+ key ifaces-acl ifaces-acl/ifaces-acl
+ replace \. _
+ replace \/ _
+ column 1 name txb
+ column 1 split + typ="sw" typ="hw"
+ column 2 name txp
+ column 2 split + typ="sw" typ="hw"
+ column 3 name rxb
+ column 3 split + typ="sw" typ="hw"
+ column 4 name rxp
+ column 4 split + typ="sw" typ="hw"
+ column 5 name last
+ column 6 name timout
+ column 7 name cfg
+ exit
+!
+sensor ifaces-hw
+    path interfaces-hw/interface/counter
+    prefix freertr-ifaces
+    prepend iface_hw_byte_
+    command sho inter hwsumm
+    name 0 ifc=
+    key name interfaces-hw/interface
+    replace \. _
+    column 1 name st
+    column 1 replace admin -1
+    column 1 replace down 0
+    column 1 replace up 1
+    column 2 name tx
+    column 3 name rx
+    column 4 name dr
+    exit
+!
+sensor ifaces-hwp
+    path interfaces-hwp/interface/counter
+    prefix freertr-ifaces
+    prepend iface_hw_pack_
+    command sho inter hwpsumm
+    name 0 ifc=
+    key name interfaces-hwp/interface
+    replace \. _
+    column 1 name st
+    column 1 replace admin -1
+    column 1 replace down 0
+    column 1 replace up 1
+    column 2 name tx
+    column 3 name rx
+    column 4 name dr
+    exit
+!
+sensor ifaces-sw
+    path interfaces-sw/interface/counter
+    prefix freertr-ifaces
+    prepend iface_sw_byte_
+    command sho inter swsumm
+    name 0 ifc=
+    key name interfaces-sw/interface
+    replace \. _
+    column 1 name st
+    column 1 replace admin -1
+    column 1 replace down 0
+    column 1 replace up 1
+    column 2 name tx
+    column 3 name rx
+    column 4 name dr
+    exit
+!
+sensor ifaces-swp
+    path interfaces-swp/interface/counter
+    prefix freertr-ifaces
+    prepend iface_sw_pack_
+    command sho inter swpsumm
+    name 0 ifc=
+    key name interfaces-swp/interface
+    replace \. _
+    column 1 name st
+    column 1 replace admin -1
+    column 1 replace down 0
+    column 1 replace up 1
+    column 2 name tx
+    column 3 name rx
+    column 4 name dr
+    exit
+!
+server prometheus router
+ port 901
+ sensor ifaces-acl
+ sensor ifaces-hw
+ sensor ifaces-hwp
+ sensor ifaces-sw
+ sensor ifaces-swp
+ vrf v1
+ exit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+server telnet tel
+ security protocol telnet
+ no exec authorization
+ no login authentication
+ vrf v1
+ exit
+!
+!
+end
