@@ -1,0 +1,70 @@
+version: '3'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+    - 9090:9090
+    command:
+    - --config.file=/etc/prometheus/prometheus.yml
+    - --web.config.file=/etc/prometheus/web.yml
+    volumes:
+    - /etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    - /etc/prometheus/web.yml:/etc/prometheus/web.yml:ro
+    - /home/tetzner/certs/example.com/example.com.crt:/home/tetzner/certs/example.com/example.com.crt:ro
+    - /home/tetzner/certs/example.com/example.com.key:/home/tetzner/certs/example.com/example.com.key:ro
+    restart: always
+    depends_on:
+    - cadvisor
+  
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    restart: always
+    ports: 
+    - 9100:9100
+  
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: cadvisor
+    ports:
+    - 8080:8080
+    restart: always
+    volumes:
+    - /:/rootfs:ro
+    - /var/run:/var/run:rw
+    - /sys:/sys:ro
+    - /var/lib/docker/:/var/lib/docker:ro
+  
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-server
+    user: "1000"
+    environment:
+    - GF_SECURITY_ADMIN_PASSWORD=vixphy@2022
+    depends_on:
+    - prometheus
+    ports:
+    - 3000:3000 
+  
+  dockerexporter:
+    image: prometheusnet/docker_exporter:latest
+    container_name: dockerexporter
+    restart: always
+    volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+    - 9417:9417 
+ 
+ 
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    restart: always
+    ports:
+      - "9093:9093"
+    command:
+    - --config.file=/etc/prometheus/alert.rules
+    volumes:
+    - /etc/prometheus/alert.rules:/etc/prometheus/alert.rules:ro
+   
