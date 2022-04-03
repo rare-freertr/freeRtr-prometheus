@@ -9,43 +9,6 @@ alerting:
       static_configs:
         - targets: [ 'alertmanager:9093' ]
 scrape_configs:
-  - job_name: 'prometheus'
-    scrape_interval: 5s
-    static_configs:
-         - targets: ['localhost:9090']
-    metrics_path: "/metrics"
-    basic_auth:
-      username: 'admin'
-      password_file: web.yml
-  - job_name: node-exporter
-    scrape_interval: 5s
-    static_configs:
-         - targets: ['200.137.68.66:9100']
-    metrics_path: "/metrics"
-    basic_auth:
-      username: 'admin'
-      password_file: web.yml
-  - job_name: cadvisor
-    scrape_interval: 5s
-    static_configs:
-         - targets: [ 'cadvisor:8080' ]
-  - job_name: dockerexporter
-    scrape_interval: 10s
-    static_configs:
-        - targets: [ '200.137.68.66:9417' ]
-    metrics_path: "/metrics"
-    basic_auth:
-      username: 'admin'
-      password_file: web.yml
-  - job_name: sdwan
-    scrape_interval: 10s
-    #scrape_timeout: 90s
-    static_configs:
-        - targets: [ '200.137.68.66:8000' ]
-    metrics_path: "/metrics"
-    basic_auth:
-      username: 'admin'
-      password_file: web.yml
   - job_name: router
     scrape_interval: 10s
     static_configs:
