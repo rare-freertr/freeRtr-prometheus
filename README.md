@@ -5,11 +5,8 @@
 freeRouter is a free, open source router os process.
 it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
-
-Documentation prometheus integration with FreeRouter:
+Documentation FreeRouter:
 - [FreeRouter](http://www.freertr.net/)
- 
-</br>
  
 ## Configuration and Install FreeRouter
 To work the FreeRtr just have java
