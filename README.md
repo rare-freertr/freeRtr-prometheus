@@ -9,14 +9,14 @@ Documentation FreeRouter:
 - [FreeRouter](http://www.freertr.net/)
  
 ## Configuration and Install FreeRouter
-To work the FreeRtr just have java
- 
+
+### To work the FreeRtr just have java
  
 ### Linux </br> 
 ```
 apt-get install default-jre-headless --no-install-recommends
 ```
-
+Get rtr.jar 
 ## FreeRouter topology
 </br>
 <div style='display: inline-block'>
@@ -66,7 +66,7 @@ sudo docker-compose up -d
 ```
 sudo docker ps
 ```
-## Run configuration
+## Run Configuration 
 ### Start Router's Configuration
 - R1
 ```
@@ -82,5 +82,14 @@ sudo docker ps
 ```
 - R4
 ```
-   java -jar <path>/rtr.jar routersc topology/r3/r3-hw.txt topology/r3/r3-sw.txt 
+   java -jar <path>/rtr.jar routersc topology/r4/r4-hw.txt topology/r4/r4-sw.txt 
 ```
+## Grafana Configuration Dashboard's 
+Access http://127.0.0.1:3000 
+- User: admin 
+- Password: tutorial2022
+
+
+
+
+## Tests Ping
