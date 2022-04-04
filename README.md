@@ -1,6 +1,6 @@
 # FreeRouter-Prometheus
 
-## About
+## About FreeRouter
 
 freeRouter is a free, open source router os process.
 it speaks routing protocols, and (re)encapsulates packets on interfaces.
