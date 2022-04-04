@@ -57,6 +57,15 @@ sudo apt install docker-compose
 ## Docker Compose file
 - [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
  
+## Start Docker Container's
+```
+cd docker
+sudo docker-compose up -d
+```
+## Check Container's
+```
+sudo docker ps
+```
 ## Run configuration
 ### Start Router's Configuration
 - R1
