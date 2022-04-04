@@ -36,9 +36,16 @@ apt-get install default-jre-headless --no-install-recommends
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/grafana/)
 ## Install Docker and docker-compose
-``` sudo apt install docker.io ``` </br>
-```sudo apt install docker-compose ```
- 
+</br>
+
+``` 
+sudo apt install docker.io 
+``` 
+```
+sudo apt install docker-compose 
+```
+</br>
+
 ## Prometheus Configuration
 - [prometheus.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
  
