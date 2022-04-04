@@ -70,17 +70,17 @@ sudo docker ps
 ### Start Router's Configuration
 - R1
 ```
-   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+   java -jar <path>/rtr.jar routersc topology/r1/r1-hw.txt topology/r1/r1-sw.txt 
 ```
 - R2
 ```
-   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+   java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt 
 ```
 - R3
 ```
-   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+   java -jar <path>/rtr.jar routersc topology/r3/r3-hw.txt topology/r3/r3-sw.txt 
 ```
 - R4
 ```
-   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+   java -jar <path>/rtr.jar routersc topology/r3/r3-hw.txt topology/r3/r3-sw.txt 
 ```
