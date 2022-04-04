@@ -8,10 +8,11 @@ Documentation prometheus integration with FreeRouter:
 To work the FreeRtr just have java
  
  
-Linux </br> </br>
+### Linux </br> 
+```
 apt-get install default-jre-headless --no-install-recommends
-</br>
-</br>
+```
+
 ## FreeRouter topology
 </br>
 <div style='display: inline-block'>
@@ -47,16 +48,19 @@ apt-get install default-jre-headless --no-install-recommends
  
 ## Run configuration
 ### Start Router's Configuration
-<code>  </code>
-<code> java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path>/r1-sw.txt  </code>   
-
-<code>  </code>
-<code> java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path>/r1-sw.txt  </code>   
-
-
-<code>  </code>
-<code> java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path>/r1-sw.txt  </code>     
-
-<code>  </code>
-<code> java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path>/r1-sw.txt  </code>  
-
+- R1
+```
+   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+```
+- R2
+```
+   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+```
+- R3
+```
+   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+```
+- R4
+```
+   java -jar <path>/rtr.jar routersc <path>/r1-hw.txt <path> r1-sw.txt 
+```
