@@ -27,8 +27,6 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 ## Topology Configuration
 - [R1](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/topology/r1)
 - [R2](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/topology/r2)
-- [R3](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/topology/r3)
-- [R4](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/topology/r4)
  
 ## Dependencies and technologies
 ![Badge](https://img.shields.io/static/v1?label=DOCKER&message=DOCKER&color=blue&style=for-the-badge&logo=DOCKER)
