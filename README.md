@@ -5,18 +5,17 @@
 freeRouter is a free, open source router os process.
 it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
-Documentation FreeRouter:
-- [FreeRouter](http://www.freertr.net/)
- 
+</br>
+
 ## Configuration and Install FreeRouter
 
-### To work the FreeRtr just have java
- 
-### Linux </br> 
-```
-apt-get install default-jre-headless --no-install-recommends
-```
-Get rtr.jar 
+#### To work the FreeRtr just have java.
+#### Consult the freerouter documentation for installing java:
+
+- [FreeRouter](http://www.freertr.net/)
+
+</br>
+
 ## FreeRouter topology
 </br>
 <div style='display: inline-block'>
@@ -35,7 +34,7 @@ Get rtr.jar
 ![Badge](https://img.shields.io/static/v1?label=DOCKER&message=DOCKER&color=blue&style=for-the-badge&logo=DOCKER)
 ![Badge](https://img.shields.io/static/v1?label=Prometheus&message=Prometheus&color=blue&style=for-the-badge&logo=PROMETHEUS)
 ![Badge](https://img.shields.io/static/v1?label=GRAFANA&message=Grafana&color=blue&style=for-the-badge&logo=GRAFANA)
-- [Docker](https://react-pdf.org/)
+- [Docker](https://www.docker.com/)
 - [Docker-Compose](https://docs.docker.com/compose/)
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/grafana/)
@@ -76,20 +75,13 @@ sudo docker ps
 ```
    java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt 
 ```
-- R3
-```
-   java -jar <path>/rtr.jar routersc topology/r3/r3-hw.txt topology/r3/r3-sw.txt 
-```
-- R4
-```
-   java -jar <path>/rtr.jar routersc topology/r4/r4-hw.txt topology/r4/r4-sw.txt 
-```
-## Grafana Configuration Dashboard's 
-Access http://127.0.0.1:3000 
+## Grafana Configuration 
+### Access http://127.0.0.1:3000 
 - User: admin 
-- Password: tutorial2022
+- Password: freerouter
 
+### Once installed configure Prometheus as Grafana data source:
 
-
-
+## Grafana Configuration Dashboard's
+### Import Dashboard 
 ## Tests Ping
