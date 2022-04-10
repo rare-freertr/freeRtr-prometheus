@@ -17,7 +17,7 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 </br>
 
 ## FreeRouter topology
-</br>
+
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-topology/topology.png' />
 </div>
@@ -36,8 +36,10 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 - [Docker-Compose](https://docs.docker.com/compose/)
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/grafana/)
-## Install Docker and docker-compose
+
 </br>
+
+## Install Docker and docker-compose
 
 ``` 
 sudo apt install docker.io 
@@ -78,8 +80,64 @@ sudo docker ps
 - User: admin 
 - Password: freerouter
 
-### Once installed configure Prometheus as Grafana data source:
+### Once installed configure Prometheus as Grafana data source
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-01.png' />
+</div>
 
-## Grafana Configuration Dashboard's
-### Import Dashboard 
-## Tests Ping
+</br>
+
+### fill in all the prometheus server information
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-02.png' />
+</div>
+
+</br>
+
+### check the the data source is defined correctly by clicking the "Save & test" button
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-03.png' />
+</div>
+
+</br>
+
+## Verification
+
+### Verification Prometheus
+- Acess Prometheus - http://127.0.0.1:9090
+
+- Acess Targets
+
+- Verify router's up
+
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-06.png' />
+</div>
+
+</br>
+
+### Verification Grafana
+
+- Download freeRouter interface bytes dashboard [here](https://grafana.com/grafana/dashboards/13153)
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-09.png' />
+</div>
+
+</br>
+
+- Access Grafana - http://127.0.0.1:3000
+
+
+- Import Dashboard RARE/freeRouter 
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-10.png' />
+</div>
+
+</br>
+
+- Dashboard Verify
+<div style='display: inline-block'>
+   <img align="center" alt="Python" src='img-grafana/img-11.png' />
+</div>
+
+

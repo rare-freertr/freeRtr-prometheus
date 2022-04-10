@@ -8,6 +8,7 @@ interface ethernet1
  description r2@e1 -> r3@e1
  vrf forwarding v1
  ipv4 address 2.2.2.1 255.255.255.252
+ ipv6 address 1112::1 ffff:ffff:ffff:ffff::
  no shutdown
  exit
 !
