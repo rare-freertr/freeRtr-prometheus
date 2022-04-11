@@ -111,7 +111,7 @@ sudo docker ps
 - Verify router's up
 
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-06.png' />
+   <img align="center" alt="Python" src='img-grafana/img-05.png' />
 </div>
 
 </br>
@@ -120,7 +120,7 @@ sudo docker ps
 
 - Download freeRouter interface bytes dashboard [here](https://grafana.com/grafana/dashboards/13153)
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-09.png' />
+   <img align="center" alt="Python" src='img-grafana/img-06.png' />
 </div>
 
 </br>
@@ -130,14 +130,14 @@ sudo docker ps
 
 - Import Dashboard RARE/freeRouter 
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-10.png' />
+   <img align="center" alt="Python" src='img-grafana/img-07.png' />
 </div>
 
 </br>
 
 - Dashboard Verify
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-11.png' />
+   <img align="center" alt="Python" src='img-grafana/img-08.png' />
 </div>
 
 
