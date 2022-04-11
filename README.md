@@ -37,7 +37,6 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/grafana/)
 
-</br>
 
 ## Install Docker and docker-compose
 
@@ -47,7 +46,7 @@ sudo apt install docker.io
 ```
 sudo apt install docker-compose 
 ```
-</br>
+
 
 ## Prometheus Configuration
 - [prometheus.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
