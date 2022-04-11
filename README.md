@@ -1,6 +1,6 @@
 # FreeRouter-Prometheus
 
-## About FreeRouter
+## Overview FreeRouter
 
 freeRouter is a free, open source router os process.
 it speaks routing protocols, and (re)encapsulates packets on interfaces.
@@ -84,21 +84,21 @@ sudo docker ps
 - User: admin 
 - Password: freerouter
 
-### Once installed configure Prometheus as Grafana data source
+- Once installed configure Prometheus as Grafana data source.
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-grafana/img-01.png' />
 </div>
 
 </br>
 
-### fill in all the prometheus server information
+- fill in all the prometheus server information.
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-grafana/img-02.png' />
 </div>
 
 </br>
 
-### check the the data source is defined correctly by clicking the "Save & test" button
+- check the the data source is defined correctly by clicking the "Save & test" button.
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-grafana/img-03.png' />
 </div>
