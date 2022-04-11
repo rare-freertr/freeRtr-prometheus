@@ -37,7 +37,6 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 - [Prometheus](https://prometheus.io/)
 - [Grafana](https://grafana.com/grafana/)
 
-
 ## Install Docker and docker-compose
 
 ``` 
@@ -54,7 +53,13 @@ sudo apt install docker-compose
  
 ## Docker Compose file
 - [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
- 
+
+## Start Deploy
+
+```
+git clone https://github.com/Tetzdesen/FreeRouter-Prometheus.git
+cd FreeRouter-Prometheus
+```
 ## Start Docker Container's
 ```
 cd docker
@@ -64,7 +69,7 @@ sudo docker-compose up -d
 ```
 sudo docker ps
 ```
-## Run Configuration 
+## Run Configuration Router's
 ### Start Router's Configuration
 - R1
 ```
