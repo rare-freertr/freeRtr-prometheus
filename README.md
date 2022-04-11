@@ -108,9 +108,9 @@ sudo docker ps
 ## Verification
 
 ### Verification Prometheus
-- Acess Prometheus - http://127.0.0.1:9090
+- Access Prometheus - http://127.0.0.1:9090
 
-- Acess Targets
+- Access Targets
 
 - Verify router's up
 
