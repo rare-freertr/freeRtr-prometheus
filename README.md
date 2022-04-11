@@ -122,7 +122,7 @@ sudo docker ps
 
 ### Verification Grafana
 
-- Download freeRouter interface bytes dashboard [here](https://grafana.com/grafana/dashboards/13153)
+- Download freeRouter interface bytes dashboard [here.](https://grafana.com/grafana/dashboards/13153)
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-grafana/img-06.png' />
 </div>
