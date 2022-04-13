@@ -5,7 +5,7 @@ vrf definition v1
  exit
 !
 interface ethernet1
- description r1@e1 -> r3@e1
+ description r1@e1 -> r2@e1
  vrf forwarding v1
  ipv4 address 1.1.1.1 255.255.255.252
  ipv6 address 1111::1 ffff:ffff:ffff:ffff::
