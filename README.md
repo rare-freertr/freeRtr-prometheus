@@ -7,6 +7,11 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
 </br>
 
+## Requirements
+#### To run this experiment, it is necessary to use a Debian-based Linux operating system.
+
+</br>
+
 ## Configuration and Install FreeRouter
 
 #### To work the FreeRtr just have java.
@@ -14,9 +19,19 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
 - [FreeRouter](http://www.freertr.net/)
 
+
+
+Install the latest and greatest Java Runtime Environment (JRE).
+```
+$ sudo apt-get install --no-install-recommends --no-install-suggests --yes default-jre-headless
+```
+Download the freeRouter jar binary.
+```
+$ wget http://www.freertr.net/rtr.jar
+```
 </br>
 
-## FreeRouter topology
+## Experiment Topology
 
 <div style='display: inline-block'>
    <img align="center" alt="Python" src='img-topology/topology.png' />
