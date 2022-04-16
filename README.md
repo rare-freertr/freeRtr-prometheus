@@ -21,11 +21,11 @@ it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
 
 
-Install the latest and greatest Java Runtime Environment (JRE).
+### Install the latest and greatest Java Runtime Environment (JRE).
 ```
 $ sudo apt-get install --no-install-recommends --no-install-suggests --yes default-jre-headless
 ```
-Download the freeRouter jar binary.
+### Download the freeRouter jar binary.
 ```
 $ wget http://www.freertr.net/rtr.jar
 ```
