@@ -75,7 +75,7 @@ $ git clone https://github.com/Tetzdesen/FreeRouter-Prometheus.git
 $ cd FreeRouter-Prometheus
 ```
 
-### Move prometheus/prometheus.yml for /etc
+## Move prometheus/prometheus.yml for /etc
 ```
 $ sudo mv prometheus /etc
 ```
