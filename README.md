@@ -75,9 +75,20 @@ $ git clone https://github.com/Tetzdesen/FreeRouter-Prometheus.git
 $ cd FreeRouter-Prometheus
 ```
 
-## Move Directory prometheus for /etc
+## Move directory prometheus for /etc
 ```
 $ sudo mv prometheus /etc
+```
+
+- Check the IP from your interface
+```
+$ ifconfig
+```
+
+- Change the IP in the prometheus.yml file with your preferred text editor
+
+```
+$ sudo nano /etc/prometheus/prometheus.yml
 ```
 ## Start Docker Container's
 ```
