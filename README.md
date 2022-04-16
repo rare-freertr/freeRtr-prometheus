@@ -95,7 +95,7 @@ sudo docker ps
    java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt 
 ```
 ## Grafana Configuration 
-### Access http://127.0.0.1:3000 
+#### Access http://127.0.0.1:3000 
 - User: admin 
 - Password: freerouter
 
