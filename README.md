@@ -92,11 +92,11 @@ $ sudo docker ps
 ### Start Router's Configuration
 - R1
 ```
-   java -jar <path>/rtr.jar routersc topology/r1/r1-hw.txt topology/r1/r1-sw.txt 
+$ java -jar <path>/rtr.jar routersc topology/r1/r1-hw.txt topology/r1/r1-sw.txt 
 ```
 - R2
 ```
-   java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt 
+$ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt 
 ```
 ## Grafana Configuration 
 #### Access http://127.0.0.1:3000 
