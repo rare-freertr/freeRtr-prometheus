@@ -54,10 +54,10 @@ $ wget http://www.freertr.net/rtr.jar
 ## Install Docker and docker-compose
 
 ``` 
-sudo apt install docker.io 
+$ sudo apt install docker.io 
 ``` 
 ```
-sudo apt install docker-compose 
+$ sudo apt install docker-compose 
 ```
 
 
@@ -71,17 +71,22 @@ sudo apt install docker-compose
 ## Start Deploy
 
 ```
-git clone https://github.com/Tetzdesen/FreeRouter-Prometheus.git
-cd FreeRouter-Prometheus
+$ git clone https://github.com/Tetzdesen/FreeRouter-Prometheus.git
+$ cd FreeRouter-Prometheus
+```
+
+### Move prometheus/prometheus.yml for /etc
+```
+$ sudo mv prometheus /etc
 ```
 ## Start Docker Container's
 ```
-cd docker
-sudo docker-compose up -d
+$ cd docker
+$ sudo docker-compose up -d
 ```
 ## Check Container's
 ```
-sudo docker ps
+$ sudo docker ps
 ```
 ## Run Configuration Router's
 ### Start Router's Configuration
