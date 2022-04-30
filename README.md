@@ -33,7 +33,7 @@ $ wget http://www.freertr.net/rtr.jar
 ## Experiment Topology
 
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-topology/topology.png' />
+   <img align="center" alt="Topology" src='img-topology/topology.png' />
 </div>
  
 </br>
@@ -116,21 +116,21 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 
 - Once installed configure Prometheus as Grafana data source.
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-01.png' />
+   <img align="center" alt="Img-Grafana-01" src='img-grafana/img-01.png' />
 </div>
 
 </br>
 
 - Fill in all the prometheus server information.
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-02.png' />
+   <img align="center" alt="Img-Grafana-02" src='img-grafana/img-02.png' />
 </div>
 
 </br>
 
 - Check the the data source is defined correctly by clicking the "Save & test" button.
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-03.png' />
+   <img align="center" alt="Img-Grafana-03" src='img-grafana/img-03.png' />
 </div>
 
 </br>
@@ -145,7 +145,7 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 - Verify router's up
 
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-05.png' />
+   <img align="center" alt="Img-Grafana-04" src='img-grafana/img-05.png' />
 </div>
 
 </br>
@@ -154,7 +154,7 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 
 - Download freeRouter interface bytes dashboard [here.](https://grafana.com/grafana/dashboards/13153)
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-06.png' />
+   <img align="center" alt="Img-Grafana-05" src='img-grafana/img-06.png' />
 </div>
 
 </br>
@@ -164,14 +164,14 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 
 - Import Dashboard RARE/freeRouter 
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-07.png' />
+   <img align="center" alt="Img-Grafana-06" src='img-grafana/img-07.png' />
 </div>
 
 </br>
 
 - Dashboard Verify
 <div style='display: inline-block'>
-   <img align="center" alt="Python" src='img-grafana/img-08.png' />
+   <img align="center" alt="Img-Grafana-07" src='img-grafana/img-08.png' />
 </div>
 
 
