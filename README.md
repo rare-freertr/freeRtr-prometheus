@@ -62,11 +62,11 @@ $ sudo apt install docker-compose
 
 
 ## Prometheus Configuration
-- [prometheus.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
+- [prometheus.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/blob/main/prometheus/prometheus.yml)
  
  
 ## Docker Compose file
-- [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/prometheus)
+- [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/blob/main/docker/docker-compose.yml)
 
 ## Start Deploy
 
