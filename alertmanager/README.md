@@ -143,9 +143,9 @@ groups:
 ```
  
 ## Docker Compose file
-- [docker-compose.yml]()
+- [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/blob/main/docker/docker-compose.yml)
 
-- Edit Docker Compose file:
+- Edit Docker Compose file
 
 ```
 $ sudo nano docker/docker-compose.yml
