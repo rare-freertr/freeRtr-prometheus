@@ -239,7 +239,7 @@ r2(cfg-if)# shutdown
 
 </br>
 
-- Access http://127.0.0.1:9093
+- Access http://localhost:9093
 
 
 <div style='display: inline-block'>
