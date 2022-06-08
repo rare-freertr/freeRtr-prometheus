@@ -175,6 +175,10 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 </div>
 
 ## Integration AlertManager
+<<<<<<< HEAD
 
 - [Integration AlertManager](https://github.com/rare-freertr/freeRtr-prometheus/tree/AlertManager/alertmanager)
+=======
+>>>>>>> 0c888a9803fdd6e80a3c0901aaa6cf1e06b2a486
 
+- [Integration AlertManager](https://github.com/rare-freertr/freeRtr-prometheus/tree/AlertManager/alertmanager)
