@@ -1,24 +1,86 @@
 # FreeRouter-Prometheus
 
 ## Overview FreeRouter
-
 #### freeRouter is a free, open source router os process. it speaks routing protocols, and (re)encapsulates packets on interfaces.
 
-</br>
 
 ## Requirements
 #### To run this experiment, it is necessary to use a Debian-based Linux operating system.
 
-</br>
+## Update's dashboards
+
+All 26 of Grafana's freeRtr dashboard's have been updated and improved. One of the main differences is that we now have the router name.
+
+
+## Sensor example universal:
+
+- You can use this universal sensor (copy and paste).
+
+```
+sensor ifaces-sw
+path interfaces-sw/interface/counter
+prefix freertr-ifaces
+key name interfaces-sw/interface
+command sho inter swsumm
+prepend iface_sw_byte_
+name 0 ifc=
+replace \. _
+column 1 name st
+column 1 replace admin -1
+column 1 replace down 0
+column 1 replace up 1
+column 2 name tx
+column 3 name rx
+column 4 name dr
+.
+exit
+```
+## freeRtr agent prometheus configuration
+
+```
+server prometheus pr
+ sensor ifaces-hw
+ sensor ifaces-sw
+ vrf <PROMETHEUS_VRF>
+ exit
+```
+
+## Configure Prometheus Server file
+
+```
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 30s
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: []
+    scheme: http
+    timeout: 10s
+scrape_configs:
+- job_name: router
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - <prometheus_agent_ip_1>:9001
+    labels:
+      node_name: <prometheus_agent_1_node_name>
+  - targets:
+    - <prometheus_agent_ip_2>:9001
+    labels:
+      node_name: <prometheus_agent_2_node_name>
+```
 
 ## Configuration and Install FreeRouter
 
 #### To work the FreeRtr just have java.
 #### Consult the freerouter documentation for installing java:
 
-- [FreeRouter](http://www.freertr.net/)
-
-
+- [FreeRouter](http://www.freertr.org/)
 
 #### Install the latest and greatest Java Runtime Environment (JRE).
 ```
@@ -26,9 +88,9 @@ $ sudo apt-get install --no-install-recommends --no-install-suggests --yes defau
 ```
 #### Download the freeRouter jar binary.
 ```
-$ wget http://www.freertr.net/rtr.jar
+$ wget http://www.freertr.org/rtr.jar
 ```
-</br>
+
 
 ## Experiment Topology
 
@@ -36,7 +98,7 @@ $ wget http://www.freertr.net/rtr.jar
    <img align="center" alt="Topology" src='img-topology/topology.png' />
 </div>
  
-</br>
+
  
 ## Topology Configuration
 - [R1](https://github.com/Tetzdesen/FreeRouter-Prometheus/tree/main/topology/r1)
@@ -152,7 +214,7 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 
 ### Verification Grafana
 
-- Download freeRouter interface bytes dashboard [here.](https://grafana.com/grafana/dashboards/13153)
+- Download freeRouter interface bytes dashboard [here.](https://grafana.com/grafana/dashboards/13153-rare-freerouter-interfaces-bytes/)
 <div style='display: inline-block'>
    <img align="center" alt="Img-Grafana-05" src='img-grafana/img-06.png' />
 </div>
@@ -170,9 +232,20 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 </br>
 
 - Dashboard Verify
+
+- R1
 <div style='display: inline-block'>
-   <img align="center" alt="Img-Grafana-07" src='img-grafana/img-08.png' />
+   <img align="center" alt="Img-Grafana-07" src='img-grafana/img-001-grafana.png' />
 </div>
+
+</br>
+
+- R2
+<div style='display: inline-block'>
+   <img align="center" alt="Img-Grafana-07" src='img-grafana/img-002-grafana.png' />
+</div>
+
+</br>
 
 ## Integration AlertManager
 
@@ -181,3 +254,5 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 ## Integration Alerts Grafana
 - [Integration Grafana Alerts](https://github.com/rare-freertr/freeRtr-prometheus/tree/main/alert-grafana-rules)
 
+
+## Dataplane Monitoring
