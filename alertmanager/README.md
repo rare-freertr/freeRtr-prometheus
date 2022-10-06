@@ -1,16 +1,12 @@
 # INTEGRATION ALERTMANAGER, FREEROUTER AND PROMETHEUS
 
-
 ## Overview FreeRouter
 
 #### As seen in the tutorial: https://github.com/rare-freertr/freeRtr-prometheus we can integrate prometheus with freeRtr. From this point, we can evolve to a tutorial involving the alert manager of prometheus (AlertManager), since it allows the integration with an alert manager.
 
-</br>
-
 ## Requirements
 #### To run this experiment, it is necessary to use a Debian-based Linux operating system.
 
-</br>
 
 ## Configuration and Install FreeRouter
 
@@ -18,8 +14,6 @@
 #### Consult the freerouter documentation for installing java:
 
 - [FreeRouter](http://www.freertr.net/)
-
-
 
 #### Install the latest and greatest Java Runtime Environment (JRE).
 ```
@@ -29,12 +23,12 @@ $ sudo apt-get install --no-install-recommends --no-install-suggests --yes defau
 ```
 $ wget http://www.freertr.net/rtr.jar
 ```
-</br>
+
 
 ## Experiment Topology
 
 <div style='display: inline-block'>
-   <img align="center" alt="Topology" src='img-topology/topology.png' />
+   <img align="center" alt="Topology" src='../img-topology/topology.png' />
 </div>
  
 </br>
@@ -141,7 +135,6 @@ groups:
     labels:
       severity: page
 ```
- 
 ## Docker Compose file
 - [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/blob/main/docker/docker-compose.yml)
 
@@ -197,11 +190,9 @@ $ java -jar <path>/rtr.jar routersc topology/r2//r2-hw.txt topology/r2/r2-sw.txt
 
 - Access: http://localhost:9090
 
-#### Check the alerts panel:
+- Check the alerts panel:
 
-<div style='display: inline-block'>
-   <img align="center" alt="Img-AlertManager" src='img-alertmanager/img-01.png' />
-</div>
+
 
 </br>
 
@@ -230,26 +221,3 @@ r2(cfg)# int eth1
 r2(cfg-if)# shutdown
 ```
 
-### Wait alert is active:
-
-- Access http://localhost:9090
-<div style='display: inline-block'>
-   <img align="center" alt="Img-AlertManager" src='img-alertmanager/img-02.png' />
-</div>
-
-</br>
-
-- Access http://localhost:9093
-
-
-<div style='display: inline-block'>
-   <img align="center" alt="Img-AlertManager" src='img-alertmanager/img-03.png' />
-</div>
-
-</br>
-
-- Access slack chat:
-
-<div style='display: inline-block'>
-   <img align="center" alt="Img-AlertManager" src='img-alertmanager/img-04.png' />
-</div>
