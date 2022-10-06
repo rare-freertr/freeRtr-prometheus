@@ -135,7 +135,6 @@ groups:
     labels:
       severity: page
 ```
- 
 ## Docker Compose file
 - [docker-compose.yml](https://github.com/Tetzdesen/FreeRouter-Prometheus/blob/main/docker/docker-compose.yml)
 
